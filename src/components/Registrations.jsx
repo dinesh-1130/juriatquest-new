@@ -43,7 +43,7 @@ export default function RegistrationFinal() {
                   Who can register?
                 </h4>
                 <p className="text-gray-100 text-sm mt-1">
-                  Students currently enrolled in 3-year or 5-year law programs from recognized South Indian law colleges.
+                 Students currently enrolled in 3-Year or 5-Year LL.B degree programs from recognized South Indian law colleges.
                 </p>
               </div>
               <div data-aos="fade-up" data-aos-delay="200">
@@ -116,7 +116,7 @@ export default function RegistrationFinal() {
               Who can register?
             </h4>
             <p className="text-sm mt-1">
-             Students currently enrolled in 3-Year or 5-Year LL.B degree programs from recognized South Indian law colleges.
+           Students currently enrolled in 3-Year or 5-Year LL.B degree programs from recognized South Indian law colleges.
             </p>
           </div>
           <div data-aos="fade-up" data-aos-delay="100">
