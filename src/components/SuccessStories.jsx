@@ -11,7 +11,6 @@ const mootCourtCommittee = [
   { name: "Ms. Lisha R", title: "JuristQuest – Moot Court Committee\nAdvocate" },
   { name: "Mr. Subramanya", title: "JuristQuest – Moot Court Committee\nAdvocate" },
   { name: "Ms. Jaishree MN", title: "JuristQuest – Moot Court Committee\nAdvocate" },
-  { name: "Mr. Ayush", title: "JuristQuest – Moot Court Committee\nAdvocate & Founder of lawjurist.com portal" },
 ];
 
 const organizingCommittee = [
@@ -49,32 +48,36 @@ export default function TeamSection() {
     const rows = chunkArray(members, 3);
     return (
       <div className="hidden sm:block space-y-10">
-        {rows.map((row, rowIndex) => (
-          <div
-            key={rowIndex}
-            className={`flex flex-wrap gap-8 ${
-              row.length === 2 ? "justify-center" : "justify-start"
-            } max-w-6xl mx-auto`}
-          >
-            {row.map((member, index) => (
-              <div
-                key={index}
-                data-aos="fade-up"
-                className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group w-full sm:w-[45%] md:w-[30%]"
-              >
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[#F1E7FA] flex items-center justify-center border-4 border-[#C4A0E8] overflow-hidden">
-                  <AvatarIcon />
+        {rows.map((row, rowIndex) => {
+          const isSingleCard = row.length === 1;
+          const isSecondRowWithOne = rowIndex === 1 && isSingleCard;
+          return (
+            <div
+              key={rowIndex}
+              className={`flex flex-wrap gap-8 ${
+                row.length === 2 || isSecondRowWithOne ? "justify-center" : "justify-start"
+              } max-w-6xl mx-auto`}
+            >
+              {row.map((member, index) => (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group w-full sm:w-[45%] md:w-[30%]"
+                >
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[#F1E7FA] flex items-center justify-center border-4 border-[#C4A0E8] overflow-hidden">
+                    <AvatarIcon />
+                  </div>
+                  <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
+                    {member.title}
+                  </p>
                 </div>
-                <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
-                  {member.name}
-                </h3>
-                <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
-                  {member.title}
-                </p>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          );
+        })}
       </div>
     );
   };

@@ -55,6 +55,11 @@ const studentCommittee = [
     title: "JuristQuest – Student Coordinator – Karnataka\nAdvocate",
     image: "/assets/profile-20.jpeg",
   },
+  {
+    name: "Mr. Robert ",
+    title: "JuristQuest - South India College Coordinator Advocate & TN Lawyers Union President",
+    image: "/assets/profile-25.jpeg",
+  },
 ];
 
 export default function TeamSection() {
@@ -64,23 +69,46 @@ export default function TeamSection() {
 
   const renderMembers = (members) => (
     <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {members.map((member, index) => (
-        <div
-          key={index}
-          data-aos="fade-up"
-          className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group"
-        >
-          <div className="w-28 h-28 mx-auto mb-4 rounded-full border-4 overflow-hidden border-[#C4A0E8] bg-[#F1E7FA]">
-            <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+      {members.map((member, index) => {
+        if (members.length === 4 && index === 3) {
+          return (
+            <div key={index} className="col-span-full flex justify-center">
+              <div
+                data-aos="fade-up"
+                className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group w-full max-w-sm"
+              >
+                <div className="w-28 h-28 mx-auto mb-4 rounded-full border-4 overflow-hidden border-[#C4A0E8] bg-[#F1E7FA]">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
+                  {member.title}
+                </p>
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <div
+            key={index}
+            data-aos="fade-up"
+            className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group"
+          >
+            <div className="w-28 h-28 mx-auto mb-4 rounded-full border-4 overflow-hidden border-[#C4A0E8] bg-[#F1E7FA]">
+              <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+            </div>
+            <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
+              {member.name}
+            </h3>
+            <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
+              {member.title}
+            </p>
           </div>
-          <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
-            {member.name}
-          </h3>
-          <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
-            {member.title}
-          </p>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 
