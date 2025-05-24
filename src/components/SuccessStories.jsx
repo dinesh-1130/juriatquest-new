@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 const mootCourtCommittee = [
   { name: "Mr. Mahesh M", title: "JuristQuest – Moot Court Committee\nSr. Advocate" },
   { name: "Ms. Lisha R", title: "JuristQuest – Moot Court Committee\nAdvocate" },
-  { name: "Mr. Subramanya", title: "JuristQuest – Moot Court Committee\nAdvocate" },
+
   { name: "Ms. Jaishree MN", title: "JuristQuest – Moot Court Committee\nAdvocate" },
 ];
 

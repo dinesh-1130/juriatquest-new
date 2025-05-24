@@ -47,14 +47,14 @@ const studentCommittee = [
   },
   {
     name: "Mr. Tejas",
-    title: "JuristQuest – Student Coordinator – AP & Telangana\nAdvocate",
+    title: "JuristQuest – Student Coordinator – Karnataka, AP & Telangana\nAdvocate",
     image: "/assets/profile-18.jpeg",
   },
-  {
-    name: "Mr. Sanidhya",
-    title: "JuristQuest – Student Coordinator – Karnataka\nAdvocate",
-    image: "/assets/profile-20.jpeg",
-  },
+  // {
+  //   name: "Mr. Sanidhya",
+  //   title: "JuristQuest – Student Coordinator – Karnataka\nAdvocate",
+  //   image: "/assets/profile-20.jpeg",
+  // },
   {
     name: "Mr. Robert ",
     title: "JuristQuest - South India College Coordinator Advocate & TN Lawyers Union President",
