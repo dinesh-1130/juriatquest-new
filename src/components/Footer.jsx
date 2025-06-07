@@ -42,17 +42,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-gray-700">
               <li><a href="/">Home</a></li>
-              <li><a href="/aboutus">About Us</a></li>
-              <li><a href="/register">Registrations</a></li>
-              <li><a href="/rules">Rules & Guidelines</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#registrations">Registrations</a></li>
+              <li><a href="#rules">Rules & Guidelines</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-3 md:invisible">&nbsp;</h4>
             <ul className="space-y-2 text-gray-700">
-              <li><a href="/sponsorship">Sponsorship</a></li>
-              <li><a href="/faqs">FAQ's</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/aboutus">our partners</a></li>
+              <li><a href="#faqs">FAQ's</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -97,10 +97,13 @@ export default function Footer() {
             </button>
             {active === "links" && (
               <ul className="px-4 pb-3 text-gray-700 space-y-2">
-                <li><a href="/">Home</a></li>
-                <li><a href="/aboutus">About Us</a></li>
-                <li><a href="/register">Registrations</a></li>
-                <li><a href="/rules">Rules & Guidelines</a></li>
+                 <li><a href="/">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#registrations">Registrations</a></li>
+              <li><a href="#rules">Rules & Guidelines</a></li>
+               <li><a href="/aboutus">our partners</a></li>
+              <li><a href="#faqs">FAQ's</a></li>
+              <li><a href="#contact">Contact Us</a></li>
               </ul>
             )}
           </div>

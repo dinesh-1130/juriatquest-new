@@ -93,7 +93,8 @@ const RulesSection = () => {
                 </div>
                 <p className="text-sm mb-4">{card.description}</p>
                 <a
-                  href="/register"
+                 href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
+  target="blank"
                   className="text-sm font-medium underline transition"
                   style={{ color: "#9F7AEA" }}
                   onMouseOver={(e) => (e.target.style.color = "#6B21A8")}

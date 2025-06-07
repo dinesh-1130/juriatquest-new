@@ -57,7 +57,7 @@ const studentCommittee = [
   // },
   {
     name: "Mr. Robert ",
-    title: "JuristQuest - South India College Coordinator Advocate & TN Lawyers Union President",
+    title: "JuristQuest - South India College Coordinator Advocate & TN Lawyers Union President.\n kerela",
     image: "/assets/profile-25.jpeg",
   },
 ];

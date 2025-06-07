@@ -10,7 +10,7 @@ import Registrations from './components/Registrations';
 import ContactUs from './components/ContactUs';
 import RulesandGuidelines from "./components/RulesandGuidelines";
 import SocialResponsibility from "./components/SocialResponsibility";
-
+import FAQChat from "./components/FAQChat"
 import About from "./components/About";
 import TrustedBy from "./components/TrustedBy";
 import Whoweare from "./components/Whoweare"
@@ -26,6 +26,8 @@ import FAQ from "./components/FAQ"
 function Home() {
   return (
     <>
+    <FAQChat />
+   
      <Herosection />
 
 <div id="about">

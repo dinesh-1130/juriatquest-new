@@ -168,18 +168,25 @@ import "swiper/css/pagination";
 
 const mootCourtCommittee = [
   {
-    name: "Mr. Mahesh M",
-    title: "JuristQuest – Moot Court Committee\nSr. Advocate"
-  },
-  {
-    name: "Ms. Lisha R",
-    title: "JuristQuest – Moot Court Committee\nAdvocate"
+    name: "Mr.Sanidhya ",
+    title: "JuristQuest – Moot Court Committee\nAdvocate",
+    image: "/assets/profile-20.jpeg" // Make sure this path is correct
   },
   {
     name: "Mr. ANANDH KUMAR V M.L(Business Law)., Ph.D in Law",
     title: "JuristQuest - Mootcourt committee Lead\nAcademician",
     image: "/assets/anand.jpeg" // Make sure this path is correct
   },
+  {
+    name: "Ms. Lisha R",
+    title: "JuristQuest – Moot Court Committee\nAdvocate"
+  },
+
+  // {
+  //   name: "Mr.Anandh ",
+  //   title: "JuristQuest – Moot Court Committee\nAdvocate"
+  // },
+ 
 ];
 
 const organizingCommittee = [

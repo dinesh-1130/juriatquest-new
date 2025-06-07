@@ -59,7 +59,7 @@ export default function Navbar() {
           <li data-aos="fade-down" data-aos-delay="250"><a href="#about" className="hover:text-[#6B21A8] transition-colors">About us</a></li>
           <li data-aos="fade-down" data-aos-delay="300"><a href="#registrations" className="hover:text-[#6B21A8] transition-colors">Registrations</a></li>
           <li data-aos="fade-down" data-aos-delay="350"><a href="#rules" className="hover:text-[#6B21A8] transition-colors">Rules & Guidelines</a></li>
-          <li data-aos="fade-down" data-aos-delay="400"><a href="/aboutus" className="hover:text-[#6B21A8] transition-colors">Sponsorship</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="/aboutus" className="hover:text-[#6B21A8] transition-colors">Our Partners</a></li>
           <li data-aos="fade-down" data-aos-delay="450"><a href="#faqs" className="hover:text-[#6B21A8] transition-colors">FAQ's</a></li>
           <li data-aos="fade-down" data-aos-delay="500"><a href="#contact" className="hover:text-[#6B21A8] transition-colors">Contact Us</a></li>
         </ul>
@@ -67,7 +67,8 @@ export default function Navbar() {
         {/* Register Button */}
         <div className="hidden lg:flex items-center space-x-4">
         <a
-  href="/register"
+  href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
+  target="blank"
   className="bg-[#6B21A8] text-white px-5 py-2 rounded font-semibold hover:bg-[#581C87] transition"
   data-aos="fade-left"
   data-aos-delay="600"
@@ -136,7 +137,8 @@ export default function Navbar() {
             </li>
             <li data-aos="fade-up" data-aos-delay="450" data-aos-duration="400">
              <a
-  href="/register"
+   href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
+  target="blank"
   className="inline-block mt-4 bg-[#6B21A8] text-white px-6 py-2 rounded font-semibold hover:bg-[#581C87] transition"
 >
   Register now
