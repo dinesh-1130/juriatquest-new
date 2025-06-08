@@ -213,7 +213,7 @@ const internationalCommittee = [
   },
   {
     name: "DR. CHRISTABEL QUEENSLEY A",
-    title: "Youth Diplomat | Lawyer | Global Development Leader | International Relations Expert",
+    title: "JuristQuest – International Relationship\nBusiness & Strategy Expert-Youth Diplomat | Lawyer | Global Development Leader | International Relations Expert",
     image: "/assets/new-5.png",
   },
 ];
@@ -249,17 +249,17 @@ const chairCommittee = [
 const studentCommittee = [
   {
     name: "Mr. Kandavel",
-    title: "JuristQuest – Student Coordinator – TN\nSr. Advocate",
+    title: "JuristQuest – Sr Advocate\nStudent Coordinator – TN. ",
     image: "/assets/profile-19.jpeg",
   },
   {
     name: "Mr. Tejas",
-    title: "JuristQuest – Student Coordinator – Karnataka, AP & Telangana\nAdvocate",
+    title: "JuristQuest – Advocate\nStudent Coordinator – Karnataka, AP & Telangana\n",
     image: "/assets/profile-18.jpeg",
   },
   {
     name: "Mr. Robert ",
-    title: "JuristQuest - South India College Coordinator Advocate & TN Lawyers Union President.\n kerela",
+    title: "JuristQuest - Advocate\nSouth India College Coordinator Advocate & TN Lawyers Union President.\n kerela",
     image: "/assets/profile-25.jpeg",
   },
 ];

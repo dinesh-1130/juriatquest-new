@@ -260,7 +260,7 @@ export default function PremiumFAQChatBot() {
       )}
 
       {open && (
-        <div className="fixed bottom-4 right-4 w-full max-w-[95vw] sm:max-w-sm md:max-w-md lg:max-w-lg max-h-[80vh] backdrop-blur-xl shadow-2xl rounded-xl flex flex-col overflow-hidden text-sm z-50 animate-in slide-in-from-bottom-5 duration-300">
+        <div className="fixed bottom-4 right-4 w-full max-w-[95vw] sm:max-w-sm md:max-w-md lg:max-w-md max-h-[80vh] backdrop-blur-xl shadow-2xl rounded-xl flex flex-col overflow-hidden text-sm z-50 animate-in slide-in-from-bottom-5 duration-300">
           <div className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-4 py-3 flex justify-between items-center relative">
             <div className="relative flex items-center space-x-3">
               <div className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">

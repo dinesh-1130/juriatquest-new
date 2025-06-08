@@ -169,7 +169,7 @@ import "swiper/css/pagination";
 const mootCourtCommittee = [
   {
     name: "Mr.Sanidhya ",
-    title: "JuristQuest – Moot Court Committee\nAdvocate",
+    title: "JuristQuest – Moot Court Committee\nmember",
     image: "/assets/profile-20.jpeg" // Make sure this path is correct
   },
   {
@@ -177,9 +177,11 @@ const mootCourtCommittee = [
     title: "JuristQuest - Mootcourt committee Lead\nAcademician",
     image: "/assets/anand.jpeg" // Make sure this path is correct
   },
-  {
+ 
+   {
     name: "Ms. Lisha R",
-    title: "JuristQuest – Moot Court Committee\nAdvocate"
+    title: "JuristQuest - Mootcourt committee\nmember",
+    image: "/assets/profile-26.jpeg" // Make sure this path is correct
   },
 
   // {

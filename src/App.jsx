@@ -1,6 +1,6 @@
 
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Form } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -17,11 +17,13 @@ import Whoweare from "./components/Whoweare"
 // Inner Pages
 
 import Aboutus from "./components/InnerPages/Aboutus"
+import Submitform from "./components/InnerPages/Submitform"
 
 import SuccessStories from "./components/SuccessStories"
 
 import { useEffect } from "react";
-import FAQ from "./components/FAQ"
+
+
 
 function Home() {
   return (
@@ -50,9 +52,9 @@ function Home() {
 
 <SuccessStories />
 
-<div id="faqs">
+{/* <div id="faqs">
   <FAQ />
-</div>
+</div> */}
 
 <div id="contact">
   <ContactUs />
@@ -69,20 +71,17 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    <Router onUpdate={() => window.scrollTo(0, 0)}
->
+    <Router>
       <div className="min-h-screen w-full overflow-x-hidden bg-white relative">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          
-          <Route path="/aboutus" element={< Aboutus/>} />
-      
+           <Route path="/our-partners" element={<Aboutus />} />
+          <Route path="/contact-form" element={<Submitform />} />
         </Routes>
-     
-          <Footer />
-        
+        <Footer />
       </div>
     </Router>
   );
