@@ -42,9 +42,7 @@ export default function RegisterInfo() {
 
         <div className="mt-12 text-center">
           <a
-            href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
-            target="_blank"
-            rel="noopener noreferrer"
+          href="/contact-form"
             className="border px-6 py-2 rounded transition font-medium text-[#6B21A8] border-[#6B21A8] hover:bg-[#6B21A8] hover:text-white inline-block"
           >
             Register Now
@@ -95,9 +93,7 @@ export default function RegisterInfo() {
 
         <div className="text-center">
           <a
-            href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
-            target="_blank"
-            rel="noopener noreferrer"
+       href="/contact-form"
             className="bg-[#6B21A8] text-white font-semibold px-6 py-3 rounded-full shadow-md inline-block"
           >
             Register Now

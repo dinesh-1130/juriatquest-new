@@ -186,7 +186,7 @@ export default function ContactSection() {
                 <FaPhoneAlt className="text-xl text-[#6B21A8] mt-1" />
                 <div>
                   <p className="text-sm text-gray-500">General Inquiry / Sponsorship / Partnership</p>
-                  <p className="font-medium text-gray-800">+91-xxxxxxxxxx</p>
+                  <p className="font-medium text-gray-800">+91-9677873855</p>
                 </div>
               </div>
 
@@ -194,19 +194,19 @@ export default function ContactSection() {
                 <FaPhoneAlt className="text-xl text-[#6B21A8] mt-1" />
                 <div>
                   <p className="text-sm text-gray-500">Customer Support</p>
-                  <p className="font-medium text-gray-800">+91-xxxxxxxxxx</p>
+                  <p className="font-medium text-gray-800">+91-9677883855</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="md:hidden text-center mt-6">
-            <button
+            {/* <button
               onClick={() => setShowFormMobile(true)}
               className="bg-[#6B21A8] text-white py-3 px-6 rounded-lg font-bold transition hover:bg-[#581c87]"
             >
               Contact Us
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -231,7 +231,7 @@ export default function ContactSection() {
 </div>
 
       {/* Mobile Form Modal */}
-      {showFormMobile && (
+      {/* {showFormMobile && (
         <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center md:hidden px-4">
           <div className="bg-white w-full max-w-md rounded-2xl p-6 shadow-xl relative">
             <button
@@ -253,7 +253,7 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

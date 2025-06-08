@@ -215,9 +215,8 @@ export default function Navbar() {
         {/* Register Button */}
         <div className="hidden lg:flex items-center space-x-4">
           <a
-            href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
-            target="blank"
-            rel="noopener noreferrer"
+        href="/contact-form"
+           
             className="bg-[#6B21A8] text-white px-5 py-2 rounded font-semibold hover:bg-[#581C87] transition"
             data-aos="fade-left"
             data-aos-delay="600"
@@ -267,9 +266,9 @@ export default function Navbar() {
             <li><a href="#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Contact Us</a></li>
             <li>
               <a
-                href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact-form"
+              
+                
                 className="inline-block mt-4 bg-[#6B21A8] text-white px-6 py-2 rounded font-semibold hover:bg-[#581C87] transition"
               >
                 Register now

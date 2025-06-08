@@ -306,13 +306,13 @@ export default function TeamSection() {
   return (
     <section className="bg-gradient-to-b from-white to-[#f3f6ec] py-24 px-6 font-['Lato']">
       <div className="max-w-7xl mx-auto text-center mb-14">
-        <p className="text-sm font-semibold mb-2 text-[#6B21A8]">Our Team</p>
+        {/* <p className="text-sm font-semibold mb-2 text-[#6B21A8]">Our Team</p>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Meet the Team Behind <span className="text-[#6B21A8]">JuristQuest 2025</span>
         </h2>
         <p className="mt-4 text-gray-600 text-sm max-w-2xl mx-auto">
           A fusion of seasoned legal minds and visionary leaders committed to delivering an extraordinary moot court experience.
-        </p>
+        </p> */}
       </div>
 
       <div className="max-w-7xl mx-auto text-left mb-10">

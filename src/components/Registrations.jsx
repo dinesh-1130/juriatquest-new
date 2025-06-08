@@ -59,9 +59,7 @@ export default function RegistrationFinal() {
             {/* CTA Button for Desktop */}
             <div className="mt-10">
               <a
-                href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="/contact-form"
                 className="bg-white text-[#6B21A8] font-semibold px-6 py-3 rounded-full shadow-lg inline-block"
               >
                 Register Now
@@ -132,9 +130,7 @@ export default function RegistrationFinal() {
         {/* CTA Button for Mobile */}
         <div className="mt-10 text-center">
           <a
-            href="https://docs.google.com/forms/d/1v_9q3K1DeL4VfgLaCJLW2CZi8a32T_990g5ux1S4yOA/edit?ts=684129b8"
-            target="_blank"
-            rel="noopener noreferrer"
+           href="/contact-form"
             className="bg-white text-[#6B21A8] font-semibold px-6 py-3 rounded-full shadow-lg inline-block"
           >
             Register Now
