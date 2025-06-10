@@ -64,7 +64,7 @@ export default function Footer() {
           </h4>
           <div className="flex items-start gap-3 text-black">
             <FaPhoneAlt className="mt-1 text-purple-800" />
-            <span>+97 79722499424</span>
+            <span>+91-9677883855</span>
           </div>
           <div className="flex items-start gap-3 text-black">
             <FaEnvelope className="mt-1 text-purple-800" />
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
           <div className="flex items-start gap-3 text-black">
             <FaMapMarkerAlt className="mt-1 text-purple-800" />
-            <span>123 Law Street, India</span>
+            <span>7th Floor, Centre Point, 2/4, Mount Pollamallee High Road, Manapakkam, Porur, Chennai, Tamil Nadu 600089</span>
           </div>
         </div>
       </div>
@@ -138,9 +138,9 @@ export default function Footer() {
             </button>
             {active === "contact" && (
               <div className="px-4 pb-3 text-gray-700 space-y-3">
-                <div className="flex items-start gap-2"><FaPhoneAlt className="mt-1 text-purple-800" /> +97 79722499424</div>
+                <div className="flex items-start gap-2"><FaPhoneAlt className="mt-1 text-purple-800" />+91-9677883855</div>
                 <div className="flex items-start gap-2"><FaEnvelope className="mt-1 text-purple-800" /> info@juristquest.com</div>
-                <div className="flex items-start gap-2"><FaMapMarkerAlt className="mt-1 text-purple-800" /> 123 Law Street, India</div>
+                <div className="flex items-start gap-2"><FaMapMarkerAlt className="mt-1 text-purple-800" /> 7th Floor, Centre Point, 2/4, Mount Pollamallee High Road, Manapakkam, Porur, Chennai, Tamil Nadu 600089</div>
               </div>
             )}
           </div>

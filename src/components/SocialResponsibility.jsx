@@ -249,17 +249,17 @@ const chairCommittee = [
 const studentCommittee = [
   {
     name: "Mr. Kandavel",
-    title: "JuristQuest – Sr Advocate\nStudent Coordinator – TN. ",
+    title: "JuristQuest – Student Coordinator – TN & AP \nSr Advocate ",
     image: "/assets/profile-19.jpeg",
   },
   {
     name: "Mr. Tejas",
-    title: "JuristQuest – Advocate\nStudent Coordinator – Karnataka, AP & Telangana\n",
+    title: "JuristQuest –Student Coordinator – Karnataka, AP & Telangana \nAdvocate",
     image: "/assets/profile-18.jpeg",
   },
   {
     name: "Mr. Robert ",
-    title: "JuristQuest - Advocate\nSouth India College Coordinator Advocate & TN Lawyers Union President.\n kerela",
+    title: "JuristQuest -South India College\nCoordinator  - kerela \nAdvocate",
     image: "/assets/profile-25.jpeg",
   },
 ];

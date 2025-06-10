@@ -169,18 +169,18 @@ import "swiper/css/pagination";
 const mootCourtCommittee = [
   {
     name: "Mr.Sanidhya ",
-    title: "JuristQuest – Moot Court Committee\nmember",
+    title: "JuristQuest – Moot Court Committee\nmember - Advocate ",
     image: "/assets/profile-20.jpeg" // Make sure this path is correct
   },
   {
     name: "Mr. ANANDH KUMAR V M.L(Business Law)., Ph.D in Law",
-    title: "JuristQuest - Mootcourt committee Lead\nAcademician",
+    title: "JuristQuest - Mootcourt committee Lead\nAcademician - Advocate",
     image: "/assets/anand.jpeg" // Make sure this path is correct
   },
  
    {
     name: "Ms. Lisha R",
-    title: "JuristQuest - Mootcourt committee\nmember",
+    title: "JuristQuest - Mootcourt committee\nmember - Advocate ",
     image: "/assets/profile-26.jpeg" // Make sure this path is correct
   },
 
@@ -192,13 +192,18 @@ const mootCourtCommittee = [
 ];
 
 const organizingCommittee = [
+ 
   { name: "Mr. Prasad RK", title: "JuristQuest – Organizing Committee Head\nCorporate Lawyer\nManaging Partner – Crosby Law Associates" },
-  { name: "Mr. Sutheesh", title: "JuristQuest – Organizing Committee Member" },
+  {
+    name: "Ms. Lisha R",
+    title: "JuristQuest - JuristQuest – Organizing Committee Member",
+    image: "/assets/mdsir.png" // Make sure this path is correct
+  },
   { name: "Mr. Samuel", title: "JuristQuest – Organizing Committee Member" },
-  { name: "Mr. Suresh P", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Suresh P", title: "JuristQuest – Organizing Committee Member " },
   { name: "Mr. Sarath", title: "JuristQuest – Organizing Committee Member" },
   { name: "Mr. Rajesh", title: "JuristQuest – Organizing Committee Member" },
-  { name: "Mr. Selvaraj", title: "JuristQuest – Organizing Committee Member" },
+
   { name: "Mr. Dinesh", title: "JuristQuest – Organizing Committee Member" },
 ];
 
@@ -222,45 +227,45 @@ export default function TeamSection() {
     return chunks;
   };
 
-  const renderMembers = (members) => {
-    const rows = chunkArray(members, 3);
-    return (
-      <div className="hidden sm:block space-y-10">
-        {rows.map((row, rowIndex) => {
-          const isSingleCard = row.length === 1;
-          const isSecondRowWithOne = rowIndex === 1 && isSingleCard;
-          return (
-            <div
-              key={rowIndex}
-              className={`flex flex-wrap gap-8 ${row.length === 2 || isSecondRowWithOne ? "justify-center" : "justify-start"} max-w-6xl mx-auto`}
-            >
-              {row.map((member, index) => (
-                <div
-                  key={index}
-                  data-aos="fade-up"
-                  className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group w-full sm:w-[45%] md:w-[30%]"
-                >
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[#F1E7FA] flex items-center justify-center border-4 border-[#C4A0E8] overflow-hidden">
-                    {member.image ? (
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <AvatarIcon />
-                    )}
-                  </div>
-                  <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
-                    {member.title}
-                  </p>
+ 
+const renderMembers = (members) => {
+  const rows = chunkArray(members, 3);
+  return (
+    <div className="hidden sm:block space-y-10">
+      {rows.map((row, rowIndex) => {
+        const isSingleCard = row.length === 1;
+        return (
+          <div
+            key={rowIndex}
+            className={`flex flex-wrap gap-8 ${isSingleCard || row.length === 2 ? "justify-center" : "justify-start"} max-w-6xl mx-auto`}
+          >
+            {row.map((member, index) => (
+              <div
+                key={index}
+                data-aos="fade-up"
+                className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group w-full sm:w-[45%] md:w-[30%]"
+              >
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[#F1E7FA] flex items-center justify-center border-4 border-[#C4A0E8] overflow-hidden">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <AvatarIcon />
+                  )}
                 </div>
-              ))}
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
+                <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
+                  {member.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
   const renderSwiper = (members) => (
     <div className="sm:hidden max-w-xs mx-auto">
