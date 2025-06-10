@@ -1001,25 +1001,25 @@ const FileUploadField = memo(({ label, name, required = true, onChange, selected
 ));
 
 export default function RegistrationForm() {
-  const [formData, setFormData] = useState({
-    teamRepName: '',
-    teamRepEmail: '',
-    speaker1: '',
-    courseType1: '',
-    yearOfStudy1: '',
-    email: '',
-    idCard: null,
-    contactNumber: '',
-    speaker2: '',
-    courseType2: '',
-    yearOfStudy2: '',
-    researcher: '',
-    institutionName: '',
-    classTeacherName: '',
-    classTeacherContact: '',
-    proofOfPayment: null
-  });
-
+ const [formData, setFormData] = useState({
+  teamRepName: '',
+  teamRepEmail: '',
+  speaker1: '',
+  courseType1: '',
+  yearOfStudy1: '',
+  email: '',
+  idCard: null,
+  contactNumber: '',
+  speaker2: '',
+  courseType2: '',
+  yearOfStudy2: '',
+  researcher: '',
+  institutionName: '',
+  classTeacherName: '',
+  classTeacherContact: '',
+  proofOfPayment: null,
+  disclaimer: false  // Add this line
+});
   const [errors, setErrors] = useState({});
 
   const handleInputChange = useCallback((e) => {
@@ -1060,27 +1060,35 @@ export default function RegistrationForm() {
   }, []);
 
   const validateForm = () => {
-    const newErrors = {};
-    const requiredFields = [
-      'teamRepName', 'teamRepEmail', 'speaker1', 'courseType1', 'yearOfStudy1',
-      'email', 'contactNumber', 'speaker2', 'courseType2', 'yearOfStudy2',
-      'researcher', 'institutionName', 'classTeacherName', 'classTeacherContact'
-    ];
-    requiredFields.forEach(field => {
-      if (!formData[field] || !formData[field].trim()) {
-        newErrors[field] = 'This is a required question';
-      }
-    });
-    if (!formData.idCard) {
-      newErrors.idCard = 'This is a required question';
+  const newErrors = {};
+  const requiredFields = [
+    'teamRepName', 'teamRepEmail', 'speaker1', 'courseType1', 'yearOfStudy1',
+    'email', 'contactNumber', 'speaker2', 'courseType2', 'yearOfStudy2',
+    'researcher', 'institutionName', 'classTeacherName', 'classTeacherContact'
+  ];
+  
+  requiredFields.forEach(field => {
+    if (!formData[field] || !formData[field].trim()) {
+      newErrors[field] = 'This is a required question';
     }
-    if (!formData.proofOfPayment) {
-      newErrors.proofOfPayment = 'This is a required question';
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
+  });
+  
+  if (!formData.idCard) {
+    newErrors.idCard = 'This is a required question';
+  }
+  
+  if (!formData.proofOfPayment) {
+    newErrors.proofOfPayment = 'This is a required question';
+  }
+  
+  // Add disclaimer validation
+  if (!formData.disclaimer) {
+    newErrors.disclaimer = 'You must agree to the terms and conditions to proceed';
+  }
+  
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
   const handleSubmit = useCallback(async () => {
     if (!validateForm()) return;
 
@@ -1139,28 +1147,28 @@ export default function RegistrationForm() {
     }
   }, [formData]);
 
-  const handleClearForm = useCallback(() => {
-    setFormData({
-      teamRepName: '',
-      teamRepEmail: '',
-      speaker1: '',
-      courseType1: '',
-      yearOfStudy1: '',
-      email: '',
-      idCard: null,
-      contactNumber: '',
-      speaker2: '',
-      courseType2: '',
-      yearOfStudy2: '',
-      researcher: '',
-      institutionName: '',
-      classTeacherName: '',
-      classTeacherContact: '',
-      proofOfPayment: null
-    });
-    setErrors({});
-  }, []);
-
+ const handleClearForm = useCallback(() => {
+  setFormData({
+    teamRepName: '',
+    teamRepEmail: '',
+    speaker1: '',
+    courseType1: '',
+    yearOfStudy1: '',
+    email: '',
+    idCard: null,
+    contactNumber: '',
+    speaker2: '',
+    courseType2: '',
+    yearOfStudy2: '',
+    researcher: '',
+    institutionName: '',
+    classTeacherName: '',
+    classTeacherContact: '',
+    proofOfPayment: null,
+    disclaimer: false  // Add this line
+  });
+  setErrors({});
+}, []);
   const getYearOptions = (courseType) => {
     const years = courseType === "3 yr LLB" ? [1, 2, 3] : [1, 2, 3, 4, 5];
     return years.map((year) => {
@@ -1226,8 +1234,8 @@ export default function RegistrationForm() {
               }`}
             >
               <option value="">Select course</option>
-              <option value="3 yr LLB">3 yr LLB</option>
-              <option value="5 yr LLB">5 yr LLB</option>
+              <option value="3 yr LLB">3 yr LL.B</option>
+              <option value="5 yr LLB">5 yr LL.B</option>
             </select>
             {errors.courseType1 && (
               <div className="flex items-center mt-2 text-red-500 text-sm">
@@ -1315,8 +1323,8 @@ export default function RegistrationForm() {
               }`}
             >
               <option value="">Select course</option>
-              <option value="3 yr LLB">3 yr LLB</option>
-              <option value="5 yr LLB">5 yr LLB</option>
+              <option value="3 yr LLB">3 yr LL.B</option>
+              <option value="5 yr LLB">5 yr LL.B</option>
             </select>
             {errors.courseType2 && (
               <div className="flex items-center mt-2 text-red-500 text-sm">
@@ -1365,7 +1373,7 @@ export default function RegistrationForm() {
           />
           
           <InputField 
-            label="Institution Name" 
+            label="Institution / College Name  " 
             name="institutionName" 
             value={formData.institutionName} 
             onChange={handleInputChange} 
@@ -1396,7 +1404,65 @@ export default function RegistrationForm() {
             selectedFile={formData.proofOfPayment} 
             error={errors.proofOfPayment} 
           />
-
+  <div className="pt-4">
+  <label className="flex items-start space-x-3 cursor-pointer">
+    <input
+      type="checkbox"
+      name="disclaimer"
+      checked={formData.disclaimer || false}
+      onChange={(e) => setFormData(prev => ({ ...prev, disclaimer: e.target.checked }))}
+      className="mt-1 h-4 w-4 text-[#6B21A8] border-gray-300 rounded focus:ring-[#6B21A8] focus:ring-2"
+      required
+    />
+    <div className="text-sm text-gray-600 leading-relaxed max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-4 bg-gray-50">
+      <div className="font-medium text-[#6B21A8] mb-3">Disclaimer for JuristQuest - Moot Court Competition Registration: <span className="text-red-500">*</span></div>
+      <div className="space-y-3">
+        <p>By registering for the JuristQuest - Moot Court Competition, you acknowledge and agree to the following terms and conditions:</p>
+        
+        <div>
+          <span className="font-medium">Personal Data Collection:</span> The information you provide will be used solely for the purpose of processing your registration and ensuring smooth participation in the Moot Court Competition. Your personal details will not be shared with third parties without your consent, except where required by law.
+        </div>
+        
+        <div>
+          <span className="font-medium">Accuracy of Information:</span> You confirm that all details provided during the registration process are accurate and complete to the best of your knowledge. Any false or misleading information may lead to disqualification from the competition.
+        </div>
+        
+        <div>
+          <span className="font-medium">Background Verification:</span> The organizing committee reserves the right to conduct background verification with the respective class teacher or institution to confirm the authenticity of the participant(s). Any instance of forgery or misrepresentation will result in immediate disqualification of the entire team from the competition.
+        </div>
+        
+        <div>
+          <span className="font-medium">Consent for Communication:</span> By registering, you give your consent to receive communication related to the competition, including but not limited to event schedules, updates, and announcements. You may opt-out of non-essential communications at any time by notifying the organizers.
+        </div>
+        
+        <div>
+          <span className="font-medium">Event Recording and Photography:</span> By participating in the event, you grant the organizers the right to record and photograph the event. These images and recordings may be used for promotional, educational, or other purposes related to the competition. If you do not wish to be photographed or recorded, please inform the organizers in advance.
+        </div>
+        
+        <div>
+          <span className="font-medium">Liability Waiver:</span> The event organizers are not liable for any personal injuries, damages, or losses incurred during your participation in the competition. By registering, you agree to assume full responsibility for your actions and safety.
+        </div>
+        
+        <div>
+          <span className="font-medium">Intellectual Property:</span> All materials submitted as part of the competition are your intellectual property, but the organizers reserve the right to use, publish, or distribute any content related to the competition for promotional purposes.
+        </div>
+        
+        <div>
+          <span className="font-medium">Compliance with Rules:</span> By registering, you agree to comply with all competition rules and guidelines set forth by the event organizers. Failure to do so may result in disqualification from the competition.
+        </div>
+        
+        <div>
+          <span className="font-medium">Modification of Terms:</span> The event organizers reserve the right to modify or update these terms and conditions at any time. Any changes will be communicated to registered participants in a timely manner.
+        </div>
+        
+        <p className="font-medium text-gray-800 pt-2">By submitting this registration form, you agree to all the terms outlined above.</p>
+      </div>
+    </div>
+  </label>
+  {errors.disclaimer && (
+    <p className="mt-2 text-sm text-red-600">{errors.disclaimer}</p>
+  )}
+</div>
           <div className="flex justify-between pt-6">
             <button 
               type="button" 

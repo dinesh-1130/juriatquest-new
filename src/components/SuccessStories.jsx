@@ -169,18 +169,18 @@ import "swiper/css/pagination";
 const mootCourtCommittee = [
   {
     name: "Mr.Sanidhya ",
-    title: "JuristQuest – Moot Court Committee\nmember - Advocate ",
+    title: "JuristQuest – Moot Court Committee\nmember\nAdvocate ",
     image: "/assets/profile-20.jpeg" // Make sure this path is correct
   },
   {
     name: "Mr. ANANDH KUMAR V M.L(Business Law)., Ph.D in Law",
-    title: "JuristQuest - Mootcourt committee Lead\nAcademician - Advocate",
+    title: "JuristQuest - Mootcourt committee Lead\nAcademician\nAdvocate",
     image: "/assets/anand.jpeg" // Make sure this path is correct
   },
  
    {
     name: "Ms. Lisha R",
-    title: "JuristQuest - Mootcourt committee\nmember - Advocate ",
+    title: "JuristQuest - Mootcourt committee\nmember\n Advocate ",
     image: "/assets/profile-26.jpeg" // Make sure this path is correct
   },
 
@@ -195,11 +195,13 @@ const organizingCommittee = [
  
   { name: "Mr. Prasad RK", title: "JuristQuest – Organizing Committee Head\nCorporate Lawyer\nManaging Partner – Crosby Law Associates" },
   {
-    name: "Ms. Lisha R",
-    title: "JuristQuest - JuristQuest – Organizing Committee Member",
+    name: "Mr. Sutheesh S ",
+    title: "JuristQuest – Organizing Committee Member\nManaging Director - Vulturelines",
     image: "/assets/mdsir.png" // Make sure this path is correct
   },
-  { name: "Mr. Samuel", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Samuel", title: "JuristQuest – Organizing Committee Member\nMarketing Head - Vulturelines",
+    image: "/assets/sam-3.png"
+   },
   { name: "Mr. Suresh P", title: "JuristQuest – Organizing Committee Member " },
   { name: "Mr. Sarath", title: "JuristQuest – Organizing Committee Member" },
   { name: "Mr. Rajesh", title: "JuristQuest – Organizing Committee Member" },
